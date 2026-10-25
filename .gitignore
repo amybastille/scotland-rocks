@@ -1,0 +1,12 @@
+# Installed packages (these get downloaded, so we don't store them)
+node_modules/
+
+# Files Next.js creates when it builds the site
+.next/
+out/
+
+# Vercel's local settings
+.vercel/
+
+# Mac system files
+.DS_Store
