@@ -15,7 +15,7 @@ export const habitats = {
   island: { label: "Islands", emoji: "🏝️" },
 };
 
-export const categories = ["Gemstones & minerals", "Rocks", "Precious metals"];
+export const categories = ["Gemstones & minerals", "Rocks", "Precious metals", "Fossils"];
 
 export const stones = [
   {
@@ -286,6 +286,7 @@ export const stones = [
     ],
     where: [
       "Skye and Mull",
+      "The Campsie Fells, just north of Glasgow, built from old lava flows",
       "Staffa, home of Fingal's Cave (look, don't collect!)",
     ],
     funFact:
@@ -370,6 +371,124 @@ export const stones = [
     funFact:
       "Stone Age people in Scotland travelled to find good flint, and archaeologists still find their arrowheads and scrapers today.",
     art: { shape: "nugget", light: "#7d8088", dark: "#2a2c31", accent: "#f0eee6", pattern: "none" },
+  },
+  {
+    slug: "ailsa-craig-granite",
+    name: "Ailsa Craig granite",
+    otherNames: "Ailsa Craig microgranite, curling stone granite",
+    category: "Rocks",
+    habitats: ["beach", "island"],
+    rarity: "Uncommon",
+    hardness: "6 – 7",
+    lustre: "Fine and speckled",
+    colours: ["grey", "green"],
+    banded: false,
+    sparkly: true,
+    summary:
+      "A fine, speckled granite from Ailsa Craig, the dome-shaped island in the Firth of Clyde. It's the stone the world's best curling stones are made from.",
+    lookFor: [
+      "Grey or greenish-grey pebbles sprinkled with tiny dark blue-black specks",
+      "A fine, even grain, much finer than ordinary granite",
+      "Smooth, heavy, well-rounded pebbles",
+    ],
+    where: [
+      "Ailsa Craig itself, about 10 miles off Girvan in the Firth of Clyde",
+      "Pebbles on South Ayrshire beaches, such as Girvan and Turnberry",
+      "Carried by Ice Age glaciers as far as Wales, Ireland and Lancashire",
+    ],
+    funFact:
+      "Most Olympic curling stones are made from Ailsa Craig granite. The island is nicknamed 'Paddy's Milestone' because it sits about halfway between Glasgow and Belfast.",
+    note:
+      "Ailsa Craig is privately owned and a protected seabird reserve, home to thousands of gannets. Look for its pebbles on the mainland beaches instead.",
+    art: { shape: "pebble", light: "#c9cfc9", dark: "#6e7a76", accent: "#2f3d5a", pattern: "speckles" },
+  },
+  {
+    slug: "arran-pitchstone",
+    name: "Arran pitchstone",
+    otherNames: "Volcanic glass",
+    category: "Rocks",
+    habitats: ["island", "beach"],
+    rarity: "Uncommon",
+    hardness: "5.5 – 6",
+    lustre: "Glassy, like dark bottle glass",
+    colours: ["black", "green"],
+    banded: false,
+    sparkly: false,
+    summary:
+      "A dark, glassy volcanic rock from the Isle of Arran in North Ayrshire. It looks like broken black or dark green bottle glass.",
+    lookFor: [
+      "Dark green to black stone with a glassy, tar-like shine",
+      "Sharp, curved edges where it has broken, just like glass",
+      "Sometimes tiny pale crystal specks inside",
+    ],
+    where: [
+      "The Isle of Arran, especially around Corriegills near Brodick",
+      "Loose pebbles on Arran's east coast beaches",
+    ],
+    funFact:
+      "Stone Age people prized Arran pitchstone for making razor-sharp tools, and traded it right across Scotland and beyond.",
+    note:
+      "Only pick up loose beach pebbles. Leave pitchstone in rock faces and walls where it is.",
+    art: { shape: "nugget", light: "#4a5a4a", dark: "#141a16", accent: "#8fa58f", pattern: "none" },
+  },
+  {
+    slug: "baryte",
+    name: "Baryte",
+    otherNames: "Barytes, heavy spar",
+    category: "Gemstones & minerals",
+    habitats: ["highland", "river"],
+    rarity: "Uncommon",
+    hardness: "3 – 3.5",
+    lustre: "Glassy to pearly",
+    colours: ["white", "pink", "clear"],
+    banded: false,
+    sparkly: true,
+    summary:
+      "A white mineral that feels surprisingly heavy for its size. It was mined in the hills near Glasgow until the 1960s.",
+    lookFor: [
+      "White or pale pink pieces that feel unusually heavy in your hand",
+      "Flat, blade-shaped crystals, often stacked together",
+      "Soft enough to scratch with a copper coin",
+    ],
+    where: [
+      "Around the old Muirshiel mine in Clyde Muirshiel Regional Park, near Lochwinnoch",
+      "Mineral veins in rocks across central Scotland",
+    ],
+    funFact:
+      "Baryte is so heavy that it's ground up for drilling North Sea oil wells, and it's used in hospitals because it shows up brightly on X-rays.",
+    note:
+      "Never go into old mine workings. Only pick up loose pieces lying on the surface, and follow the regional park's guidance.",
+    art: { shape: "crystal", light: "#ffffff", dark: "#c9bfc7", accent: "#f3e9ef", pattern: "none" },
+  },
+  {
+    slug: "fossil-plants",
+    name: "Fossil plants",
+    otherNames: "Coal-age fossils, Lepidodendron",
+    category: "Fossils",
+    habitats: ["beach", "river"],
+    rarity: "Uncommon",
+    hardness: "Varies",
+    lustre: "Dull",
+    colours: ["black", "grey", "brown"],
+    banded: true,
+    sparkly: false,
+    summary:
+      "Prints of giant tree-like plants and ferns from the steamy swamp forests that covered central Scotland 330 million years ago, when it sat near the equator.",
+    lookFor: [
+      "Dark grey shale or sandstone with leaf, stem or fern prints",
+      "Bark patterns of diamond-shaped scales, like snakeskin (that's Lepidodendron)",
+      "Check the flat faces of loose pieces of shale on the shore",
+    ],
+    where: [
+      "Stevenston Beach in North Ayrshire",
+      "Old coal-mining areas of Ayrshire and Lanarkshire",
+      "Fossil Grove in Victoria Park, Glasgow (look, don't collect!)",
+    ],
+    funFact:
+      "Glasgow's Fossil Grove has 11 fossil tree stumps, around 330 million years old, still standing where they grew. They were discovered in 1887.",
+    note:
+      "Fossil Grove is protected. On private land and old pit bings (spoil heaps), ask permission before you look.",
+    art: { shape: "slab", light: "#8a8a86", dark: "#2f302d", accent: "#5c6b4a", pattern: "layers" },
   },
 ];
 

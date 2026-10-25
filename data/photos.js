@@ -95,4 +95,32 @@ export const photos = {
     license: "CC BY-SA 4.0",
     page: "https://commons.wikimedia.org/wiki/File:Flint_nodule_with_cortex_from_the_flint_mine_of_Rijckholt-Sint_Geertruid,_Netherlands,_4500-3000_BC-DSC05179.jpg",
   },
+  "ailsa-craig-granite": {
+    src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Ailsa_Curling_Stone.jpg/960px-Ailsa_Curling_Stone.jpg",
+    alt: "A curling stone made from Ailsa Craig granite",
+    author: "David Smith",
+    license: "CC BY 2.0",
+    page: "https://commons.wikimedia.org/wiki/File:Ailsa_Curling_Stone.jpg",
+  },
+  "arran-pitchstone": {
+    src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Pitchstone_saxony.jpg/500px-Pitchstone_saxony.jpg",
+    alt: "Dark, glassy pitchstone blocks built into an old wall",
+    author: "Lysippos",
+    license: "CC BY-SA 3.0",
+    page: "https://commons.wikimedia.org/wiki/File:Pitchstone_saxony.jpg",
+  },
+  baryte: {
+    src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Baryte-38313.jpg/500px-Baryte-38313.jpg",
+    alt: "White blade-shaped baryte crystals",
+    author: "Robert M. Lavinsky",
+    license: "CC BY-SA 3.0",
+    page: "https://commons.wikimedia.org/wiki/File:Baryte-38313.jpg",
+  },
+  "fossil-plants": {
+    src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Lepidodendron_bark_scales_-_Stevenston_Beach.JPG/960px-Lepidodendron_bark_scales_-_Stevenston_Beach.JPG",
+    alt: "Fossil tree bark with diamond-shaped scales on Stevenston Beach, Ayrshire",
+    author: "Rosser1954",
+    license: "CC BY-SA 4.0",
+    page: "https://commons.wikimedia.org/wiki/File:Lepidodendron_bark_scales_-_Stevenston_Beach.JPG",
+  },
 };

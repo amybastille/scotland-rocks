@@ -1,11 +1,11 @@
 "use client";
 
-// The map page: pick a stone to show only its pins
+// The map page: pick a stone to show only its pins, or zoom in on an area
 
 import Link from "next/link";
 import { useState } from "react";
 import MapLoader from "./MapLoader";
-import { places } from "@/data/places";
+import { clydeArea, places } from "@/data/places";
 import { stones } from "@/data/stones";
 
 const mapped = stones.filter((stone) => places[stone.slug]);
@@ -13,11 +13,22 @@ const everywhere = stones.filter((stone) => !places[stone.slug]);
 
 export default function MapExplorer() {
   const [selected, setSelected] = useState("all");
+  const [area, setArea] = useState("scotland");
   const shown = selected === "all" ? mapped : mapped.filter((s) => s.slug === selected);
+  const view = area === "clyde" ? { center: clydeArea.center, zoom: clydeArea.zoom } : {};
 
   return (
     <>
       <div className="filters">
+        <div className="filter-row">
+          <span className="filter-label">Area</span>
+          <button className={`chip ${area === "scotland" ? "active" : ""}`} onClick={() => setArea("scotland")}>
+            All of Scotland
+          </button>
+          <button className={`chip ${area === "clyde" ? "active" : ""}`} onClick={() => setArea("clyde")}>
+            📍 {clydeArea.label}
+          </button>
+        </div>
         <div className="filter-row">
           <span className="filter-label">Show</span>
           <button className={`chip ${selected === "all" ? "active" : ""}`} onClick={() => setSelected("all")}>
@@ -36,7 +47,8 @@ export default function MapExplorer() {
         </div>
       </div>
 
-      <MapLoader stones={shown} />
+      {/* "key" makes the map redraw at the new area when it changes */}
+      <MapLoader key={area} stones={shown} {...view} />
 
       <p className="map-note">
         Pins show the general area to explore, not an exact spot. Always check

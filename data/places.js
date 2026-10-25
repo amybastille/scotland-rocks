@@ -3,6 +3,22 @@
 // spot on Google Maps; the first number is lat and the second is lng.
 // Pins show the general area, not an exact spot.
 
+// The Ayrshire & Glasgow area: a box around the Firth of Clyde, Arran,
+// Ayrshire, Renfrewshire and Glasgow. Used by the area filters.
+export const clydeArea = {
+  label: "Ayrshire & Glasgow",
+  center: [55.65, -4.6],
+  zoom: 9,
+  box: { north: 56.1, south: 55.1, west: -5.45, east: -3.9 },
+};
+
+export function isInClydeArea(slug) {
+  const { box } = clydeArea;
+  return (places[slug] || []).some(
+    (p) => p.lat <= box.north && p.lat >= box.south && p.lng >= box.west && p.lng <= box.east
+  );
+}
+
 export const places = {
   agate: [
     { name: "Lunan Bay, Angus", lat: 56.65, lng: -2.5 },
@@ -33,6 +49,7 @@ export const places = {
     { name: "Fingal's Cave, Staffa (look, don't collect)", lat: 56.4335, lng: -6.3359 },
     { name: "Isle of Skye", lat: 57.4, lng: -6.25 },
     { name: "Isle of Mull", lat: 56.45, lng: -5.95 },
+    { name: "Campsie Fells, near Glasgow", lat: 56.02, lng: -4.2 },
   ],
   "old-red-sandstone": [
     { name: "Orkney", lat: 58.98, lng: -3.1 },
@@ -47,5 +64,20 @@ export const places = {
   ],
   flint: [
     { name: "Buchan, Aberdeenshire", lat: 57.5, lng: -1.95 },
+  ],
+  "ailsa-craig-granite": [
+    { name: "Ailsa Craig (seabird reserve, admire from the shore)", lat: 55.2522, lng: -5.1167 },
+    { name: "Girvan beach, South Ayrshire", lat: 55.243, lng: -4.858 },
+    { name: "Turnberry beach, South Ayrshire", lat: 55.318, lng: -4.83 },
+  ],
+  "arran-pitchstone": [
+    { name: "Corriegills, near Brodick, Arran", lat: 55.567, lng: -5.115 },
+  ],
+  baryte: [
+    { name: "Old Muirshiel mine, near Lochwinnoch", lat: 55.845, lng: -4.76 },
+  ],
+  "fossil-plants": [
+    { name: "Stevenston Beach, North Ayrshire", lat: 55.635, lng: -4.765 },
+    { name: "Fossil Grove, Victoria Park, Glasgow (look, don't collect)", lat: 55.8735, lng: -4.3365 },
   ],
 };

@@ -7,6 +7,7 @@ import { getStone, stones } from "@/data/stones";
 
 const heroStones = ["agate", "cairngorm", "gold", "serpentine", "garnet", "granite"].map(getStone);
 const featured = ["iona-marble", "lewisian-gneiss", "basalt", "jasper"].map(getStone);
+const local = ["ailsa-craig-granite", "fossil-plants", "arran-pitchstone", "baryte"].map(getStone);
 
 export default function Home() {
   return (
@@ -82,6 +83,31 @@ export default function Home() {
               <div className="feature-icon">🏆</div>
               <h3>My collection</h3>
               <p>Tick off every stone you find, and work your way up from Pebble Spotter to Stone Master.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="container">
+          <div className="section-head">
+            <span className="eyebrow">📍 Ayrshire &amp; Glasgow</span>
+            <h2>Treasures on your doorstep</h2>
+            <p>
+              Look out to sea from the Ayrshire coast and you&apos;ll spot Ailsa
+              Craig, the island that gives the world its curling stones. Its
+              speckled granite washes up on beaches from Girvan to Turnberry,
+              and there&apos;s plenty more to find around the Clyde.
+            </p>
+          </div>
+          <div className="stone-grid">
+            {local.map((stone) => (
+              <StoneCard key={stone.slug} stone={stone} />
+            ))}
+          </div>
+          <div style={{ marginTop: 24 }}>
+            <Link href="/map" className="btn btn-ghost">
+              See them on the map →
             </Link>
           </div>
         </div>
