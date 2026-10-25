@@ -289,15 +289,20 @@ svg {
 .hero-stones {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+  gap: 14px;
 }
 
-.hero-stones .stone-art {
+.hero-stone {
   animation: float 6s ease-in-out infinite;
 }
 
-.hero-stones .stone-art:nth-child(2n) { animation-delay: -2s; }
-.hero-stones .stone-art:nth-child(3n) { animation-delay: -4s; }
+.hero-stone .photo {
+  box-shadow: var(--shadow-lift);
+  border: 4px solid #fff;
+}
+
+.hero-stone:nth-child(2n) { animation-delay: -2s; }
+.hero-stone:nth-child(3n) { animation-delay: -4s; }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
@@ -305,7 +310,7 @@ svg {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-stones .stone-art { animation: none; }
+  .hero-stone { animation: none; }
 }
 
 .hills {
@@ -843,7 +848,8 @@ svg {
   position: relative;
 }
 
-.collect-item .stone-art {
+.collect-item .stone-art,
+.collect-item .photo {
   filter: grayscale(1);
   opacity: 0.45;
   transition: all 0.25s ease;
@@ -854,7 +860,8 @@ svg {
   background: var(--mint);
 }
 
-.collect-item.found .stone-art {
+.collect-item.found .stone-art,
+.collect-item.found .photo {
   filter: none;
   opacity: 1;
 }
@@ -945,6 +952,118 @@ svg {
 
 .kit-list li {
   margin: 6px 0;
+}
+
+/* ---------- Map ---------- */
+
+.stone-map,
+.map-loading {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  z-index: 0;
+}
+
+/* Softens the map's colours to suit the pastel theme */
+.stone-map .leaflet-tile-pane {
+  filter: saturate(0.55) brightness(1.06) contrast(0.92);
+}
+
+.map-loading {
+  height: 560px;
+  display: grid;
+  place-items: center;
+  background: var(--lavender);
+  color: var(--muted);
+}
+
+.map-pin span {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 3px solid;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 14px;
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.leaflet-popup-content {
+  margin: 12px 16px;
+  line-height: 1.4;
+}
+
+.popup-title {
+  display: block;
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 1.1rem;
+  color: var(--loch);
+}
+
+.popup-place {
+  display: block;
+  color: var(--muted);
+  margin: 2px 0 8px;
+}
+
+.chip-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid;
+  margin-right: 6px;
+  vertical-align: -1px;
+}
+
+.map-note {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 12px 0 0;
+}
+
+/* ---------- Photos ---------- */
+
+.photo {
+  position: relative;
+  overflow: hidden;
+  background: var(--lavender);
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-card {
+  aspect-ratio: 4 / 3;
+}
+
+.photo-detail {
+  aspect-ratio: 1 / 1;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.photo-thumb {
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+}
+
+.photo-credit {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin: 8px 4px 0;
+}
+
+.photo-credit a {
+  color: var(--muted);
 }
 
 /* ---------- Phones and small screens ---------- */

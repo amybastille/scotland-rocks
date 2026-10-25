@@ -9,6 +9,8 @@ Live site: https://scotland-rocks.vercel.app
 | Folder or file | What it is |
 | --- | --- |
 | `data/stones.js` | **The list of every stone.** Edit this to change text or add new stones. Every page updates automatically. |
+| `data/photos.js` | **The photos.** Each stone's picture, photographer and licence, from Wikimedia Commons. |
+| `data/places.js` | **The map pins.** The places where each stone can be found. |
 | `app/` | **The pages.** Each folder is a web address, so `app/identify/` becomes `/identify`. |
 | `app/page.jsx` | The home page. |
 | `app/layout.jsx` | The top menu and footer that appear on every page. |

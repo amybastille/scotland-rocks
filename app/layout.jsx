@@ -18,6 +18,7 @@ export const metadata = {
 
 const links = [
   { href: "/stones", label: "Stone guide" },
+  { href: "/map", label: "Map" },
   { href: "/identify", label: "Identify a find" },
   { href: "/collection", label: "My collection" },
   { href: "/code", label: "Collecting code" },

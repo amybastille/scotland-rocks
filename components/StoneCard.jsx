@@ -1,13 +1,14 @@
 import Link from "next/link";
-import StoneArt from "./StoneArt";
+import StonePhoto from "./StonePhoto";
 import { habitats } from "@/data/stones";
+import { photos } from "@/data/photos";
 
 export default function StoneCard({ stone, found = false }) {
   return (
     <Link href={`/stones/${stone.slug}`} className="stone-card">
       {found && <span className="found-badge">✓ Found</span>}
-      <div className="stone-card-art">
-        <StoneArt stone={stone} />
+      <div className={photos[stone.slug] ? "" : "stone-card-art"}>
+        <StonePhoto stone={stone} variant="card" />
       </div>
       <div className="stone-card-body">
         <div className="tags">

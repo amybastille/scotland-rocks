@@ -4,7 +4,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import FoundButton from "@/components/FoundButton";
-import StoneArt from "@/components/StoneArt";
+import MapLoader from "@/components/MapLoader";
+import StonePhoto from "@/components/StonePhoto";
+import { places } from "@/data/places";
+import { photos } from "@/data/photos";
 import { getStone, habitats, stones } from "@/data/stones";
 
 export function generateStaticParams() {
@@ -34,8 +37,8 @@ export default async function StonePage({ params }) {
       </Link>
 
       <div className="detail-hero">
-        <div className="detail-art">
-          <StoneArt stone={stone} />
+        <div className={photos[stone.slug] ? "" : "detail-art"}>
+          <StonePhoto stone={stone} variant="detail" showCredit />
         </div>
         <div>
           <div className="tags">
@@ -87,6 +90,13 @@ export default async function StonePage({ params }) {
           </ul>
         </div>
       </div>
+
+      {places[stone.slug] && (
+        <div className="panel" style={{ marginTop: 24 }}>
+          <h2>🗺️ On the map</h2>
+          <MapLoader stones={[stone]} height={380} />
+        </div>
+      )}
 
       <div className="callout callout-fun">
         <strong>✨ Did you know?</strong>

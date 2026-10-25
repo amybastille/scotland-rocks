@@ -5,7 +5,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import StoneArt from "./StoneArt";
+import StonePhoto from "./StonePhoto";
 import { stones } from "@/data/stones";
 
 const questions = [
@@ -118,7 +118,7 @@ export default function Identifier() {
         <div className="results">
           {matches.map(({ stone, match }) => (
             <Link key={stone.slug} href={`/stones/${stone.slug}`} className="result-card">
-              <StoneArt stone={stone} />
+              <StonePhoto stone={stone} variant="thumb" />
               <div>
                 <h3>{stone.name}</h3>
                 <div className="match-bar">

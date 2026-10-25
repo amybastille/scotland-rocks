@@ -3,7 +3,7 @@
 // The "My collection" checklist, with ranks to earn
 
 import Link from "next/link";
-import StoneArt from "./StoneArt";
+import StonePhoto from "./StonePhoto";
 import { stones } from "@/data/stones";
 import { rankFor, ranks, useCollection } from "@/lib/useCollection";
 
@@ -43,7 +43,7 @@ export default function Collection() {
               aria-pressed={isFound}
             >
               <span className="collect-check" aria-hidden="true">{isFound ? "✓" : ""}</span>
-              <StoneArt stone={stone} />
+              <StonePhoto stone={stone} variant="thumb" />
               <strong>{stone.name}</strong>
               <small>{isFound ? `Found ${found[stone.slug]}` : "Not found yet"}</small>
             </button>

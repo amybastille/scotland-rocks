@@ -1,7 +1,7 @@
 // The home page (what people see at scotland-rocks.vercel.app)
 
 import Link from "next/link";
-import StoneArt from "@/components/StoneArt";
+import StonePhoto from "@/components/StonePhoto";
 import StoneCard from "@/components/StoneCard";
 import { getStone, stones } from "@/data/stones";
 
@@ -47,7 +47,9 @@ export default function Home() {
           </div>
           <div className="hero-stones" aria-hidden="true">
             {heroStones.map((stone) => (
-              <StoneArt key={stone.slug} stone={stone} />
+              <div key={stone.slug} className="hero-stone">
+                <StonePhoto stone={stone} variant="thumb" />
+              </div>
             ))}
           </div>
         </div>
