@@ -393,6 +393,48 @@ svg {
   object-fit: cover;
 }
 
+.about-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 0;
+}
+
+.about-fact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 16px 8px 10px;
+  box-shadow: var(--shadow);
+}
+
+.about-fact-emoji {
+  font-size: 1.4rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--lavender);
+  display: grid;
+  place-items: center;
+}
+
+.about-fact dt {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.about-fact dd {
+  margin: 0;
+  font-weight: 600;
+  color: var(--loch);
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
@@ -1412,6 +1454,10 @@ svg {
   .about-avatar {
     width: 140px;
     height: 140px;
+  }
+
+  .about-facts {
+    justify-content: center;
   }
 }
 

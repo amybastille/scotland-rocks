@@ -30,6 +30,17 @@ export default function AboutPage() {
             <span className="eyebrow">About</span>
             <h1>Meet {about.name}</h1>
             <p className="lead">{about.tagline}</p>
+            <dl className="about-facts">
+              {about.facts.map((fact) => (
+                <div key={fact.label} className="about-fact">
+                  <span className="about-fact-emoji" aria-hidden="true">{fact.emoji}</span>
+                  <div>
+                    <dt>{fact.label}</dt>
+                    <dd>{fact.value}</dd>
+                  </div>
+                </div>
+              ))}
+            </dl>
           </div>
         </div>
       </section>

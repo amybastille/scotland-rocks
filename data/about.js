@@ -5,12 +5,21 @@
 export const about = {
   name: "Amy",
   photo: null,
-  tagline: "Rock fan, beachcomber and the maker of this website.",
+  tagline: "Lifelong rock collector from Bonnybridge, and the maker of this website.",
 
   story: [
     "Hi, I'm Amy, and I made Stones of Scotland.",
+    "I'm 24 and I live in Bonnybridge, here in Scotland, with my dog Bonnie. I've always been into collecting rocks, ever since I was little.",
     "This website started life as one simple page about the rocks and gemstones you can collect in Scotland. Bit by bit it grew into a proper guide, with real photos, a map of where to look, a helper for identifying your finds and a collection to fill.",
-    "I built it while learning how to make websites, one step at a time. My hope is that it helps more people slow down on a beach walk, pick up a pebble and wonder where it came from.",
+    "I built it while learning how to make websites, one step at a time. My hope is that it helps more people slow down on a walk, pick up a pebble and wonder where it came from.",
+  ],
+
+  // The little fact cards at the top of the page
+  facts: [
+    { emoji: "🎂", label: "Age", value: "24" },
+    { emoji: "🏡", label: "Home", value: "Bonnybridge, Scotland" },
+    { emoji: "🐶", label: "Best pal", value: "Bonnie the dog" },
+    { emoji: "🪨", label: "Collecting since", value: "I was little" },
   ],
 
   // Stones to show under "My favourites". Use the names from the web address,
